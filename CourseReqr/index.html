@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+<title>CourseReqr S14</title>
+<script src="lib/d3.v2.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/d3.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+  <div id="sidePanelBackground">
+  </div>
+  <div id="sidePanel">
+      <img class="opButton" style="pointer-events:all" src="img/save.png" onclick="saveCookie();"/>
+      <img id="logo" src="img/logo.png"/>
+      <img class="opButton" src="img/trash.png" style="pointer-events:all" onclick="deleteCookie();"/>
+    <li class="search">
+      <form>
+        <input type="text" id="search_text" class="textbox" onkeydown="return searchBox(event)"
+        placeholder="Search Course #..." maxlength="6" autofocus autocomplete="off">
+        <input type="button" name="search_button" id="searchButton" class="button" onclick="searchButton(event)">
+      </form>
+    </li>
+    <li class="search" style="top:55px">
+      <form>
+        <input type="text" id="upload_text" class="textbox" onkeydown="return uploadBox(event)"
+        placeholder="Upload courses taken..." autocomplete="off">
+        <input type="button" name="search_button" id="upload_button" class="button" onclick="uploadButton()">
+      </form>
+    </li>
+    <div id="courseDescription" class="unactive" style="white-space: pre-line;font-size:3em; height: 80%; overflow: scroll; text-align: left;"></div>
+  </div>
+  <div id="chart">
+  </div>
+<script src="js/d3view.js"></script>
+<script src="js/util.js"></script>
+</body>
+</html>
